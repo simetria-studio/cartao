@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('teste-api', [TesteApiController::class, 'index']);
+Route::get('delete-venda', [TesteApiController::class, 'exvluirVenda']);
+Route::get('teste-data', [TesteApiController::class, 'testeData']);
+Route::get('client-insert', [TesteApiController::class, 'insertClient']);
