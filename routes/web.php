@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PainelController;
 use App\Http\Controllers\TesteApiController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,7 @@ Route::any('client-insert', [TesteApiController::class, 'insertClient'])->name('
 Route::get('/', [FrontController::class, 'index'])->name('index');
 
 
-Route::get('admin', function(){
-
-    return view('layouts.painel');
+Route::prefix('admin')->group(function () {
+    Route::get('/', [PainelController::class, 'index'])->name('admin.index');
+    Route::get('pedidos', [PainelController::class, 'index'])->name('admin.pedidos');
 });

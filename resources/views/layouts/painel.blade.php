@@ -15,17 +15,18 @@
     <header>
         <div class="side-bar">
             <div class="logo">
-                <img src="{{ asset('painel/img/logo.svg') }}" alt="logo">
+                <a href="{{ route('admin.index') }}"><img src="{{ asset('painel/img/logo.svg') }}" alt="logo"></a>
             </div>
             <div class="menu">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/home.svg') }}" alt="">
+                        <a class="nav-link" href="{{ route('admin.index') }}"><img
+                                src="{{ asset('painel/img/icons/home.svg') }}" alt="">
                             Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/shopping-cart.svg') }}"
-                                alt=""> Pedidos</a>
+                        <a class="nav-link" href="{{ route('admin.pedidos') }}"><img
+                                src="{{ asset('painel/img/icons/shopping-cart.svg') }}" alt=""> Pedidos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/percent.svg') }}"
@@ -40,8 +41,8 @@
                                 alt=""> Influencers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/settings-alt.svg') }}"
-                                alt=""> Configurações</a>
+                        <a class="nav-link" href="#"><img
+                                src="{{ asset('painel/img/icons/settings-alt.svg') }}" alt=""> Configurações</a>
                     </li>
 
                 </ul>
@@ -49,8 +50,14 @@
         </div>
         <div class="header-top container-custom">
             <div class="content-top">
-                <div>
-                    <p>Dashboard</p>
+                <div class="text-capitalize">
+                    <p>
+                        @if (!Request::segment(2))
+                            Dashboard
+                        @else
+                            {{ Request::segment(2) }}
+                        @endif
+                    </p>
                 </div>
                 <div class="user-alt">
                     <div class="user">
@@ -71,7 +78,9 @@
         </div>
     </header>
     <main>
-        @yield('content')
+        <div class="container-custom">
+            @yield('content')
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
