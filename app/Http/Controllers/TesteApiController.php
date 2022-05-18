@@ -61,7 +61,7 @@ class TesteApiController extends Controller
             ]
         );
 
-        return $res->getBody();
+        // return view('');
     }
 
     public function exvluirVenda()
