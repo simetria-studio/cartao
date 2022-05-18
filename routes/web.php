@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\TesteApiController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('teste-api', [TesteApiController::class, 'index']);
+
+Route::any('teste-api', [TesteApiController::class, 'index'])->name('teste.api');
 Route::get('delete-venda', [TesteApiController::class, 'exvluirVenda']);
 Route::get('teste-data', [TesteApiController::class, 'testeData']);
-Route::get('client-insert', [TesteApiController::class, 'insertClient']);
+Route::any('client-insert', [TesteApiController::class, 'insertClient'])->name('client.insert');
+
+Route::get('/', [FrontController::class, 'index'])->name('index');

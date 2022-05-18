@@ -10,12 +10,12 @@ class TesteApiController extends Controller
 
 
 
-    public function index()
+    public function index(Request $request)
     {
         $apiKey = env('KEY_FATURA_SIMPLES');
         $client = new Client();
         $res = $client->request(
-            'GET',
+            'POST',
             'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/',
             [
                 'auth' => [$apiKey, ''],
@@ -26,7 +26,7 @@ class TesteApiController extends Controller
                     "agendamento_repetir" => 2, // repetir sempre
                     'agendamento_automatico' => 1, // realizar geração automaticamente
                     "discriminacao" => "Teste da Fatura Simples",
-                    "id_cliente" => 5,
+                    "id_cliente" => $request->id_user,
                     "id_meio_pagamento" => 15,
                     "metodo_cobranca" => 3, // aguardar pagamento para emitir FS
                     "email_enviar" => 1,
@@ -48,7 +48,7 @@ class TesteApiController extends Controller
                     ],
                     "parcelas" => [
                         [
-                            "data_vencimento" => "2022-05-14",
+                            "data_vencimento" => date("Y-m-d H:i", strtotime("+30 minutes")),
                             "valor" => 1,
                             'status	' => 1,
                             'valor_original' => 1,
@@ -70,40 +70,47 @@ class TesteApiController extends Controller
         $client = new Client();
         $res = $client->request(
             'DELETE',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/25',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/20',
             ['auth' => [$apiKey, '']]
         );
 
         echo $res->getBody();
     }
 
-    public function insertClient()
+    public function insertClient(Request $request)
     {
-        $apiKey = env('KEY_FATURA_SIMPLES');
-        $client = new Client();
-        $res = $client->request(
-            'POST',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/clientes/',
-            [
-                'auth' => [$apiKey, ''],
-                'json' => [
-                    'tipo' => 1,
-                    'nome' => 'Cliente de Teste contato API',
-                    "contatos" => [
-                        [
-                            'tipo' => 'Titular',
-                            'email' => 'teste@gmail.com',
-                            'principal' => 1,
-                            'nome' => 'Teste 3',
-                            'telefone' => '(44) 44444-4444',
-                            'celular' => '(44) 44444-4444',
+        // dd($request->all());
+        if ($request->ajax()) {
+            $apiKey = env('KEY_FATURA_SIMPLES');
+            $client = new Client();
+            $res = $client->request(
+                'POST',
+                'https://cartaocomvoce.faturasimples.com.br/api/v2/clientes/',
+                [
+                    'auth' => [$apiKey, ''],
+                    'json' => [
+                        'tipo' => 2,
+                        'nome' => $request->name,
+                        'cpf' => $request->cpf,
+                        'genero' => $request->genero,
+                        "contatos" => [
+                            [
+                                'tipo' => 'Titular',
+                                'email' => $request->email,
+                                'principal' => 1,
+                                'nome' => $request->name,
+                                'telefone' => $request->telefone,
+                                'celular' => $request->celular,
+                            ]
                         ]
                     ]
                 ]
-            ]
-        );
-
-        echo $res->getBody();
+            );
+            $response = (string) $res->getBody();
+            $response = json_decode($response);
+            $view = view('front.render.payment', get_defined_vars())->render();
+            return response()->json([get_defined_vars()]);
+        }
     }
 
     public function testeData()
