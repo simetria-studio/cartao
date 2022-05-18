@@ -61,7 +61,7 @@ class TesteApiController extends Controller
             ]
         );
 
-        // return view('');
+        return view('front.thanks');
     }
 
     public function exvluirVenda()
