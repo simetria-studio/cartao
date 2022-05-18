@@ -23,3 +23,9 @@ Route::get('teste-data', [TesteApiController::class, 'testeData']);
 Route::any('client-insert', [TesteApiController::class, 'insertClient'])->name('client.insert');
 
 Route::get('/', [FrontController::class, 'index'])->name('index');
+
+
+Route::get('admin', function(){
+
+    return view('layouts.painel');
+});
