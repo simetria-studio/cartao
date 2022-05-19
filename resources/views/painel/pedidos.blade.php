@@ -63,9 +63,9 @@
     </div>
     <div class="pedidos-body">
         @foreach ($vendas as $venda)
-        @php
-            $date = new DateTime($venda->email_enviado)
-        @endphp
+            @php
+                $date = new DateTime($venda->email_enviado);
+            @endphp
             <div class="item-pedido">
                 <div class="pedido-list">
                     <div class="">
@@ -102,7 +102,18 @@
                     </div>
                     <div>
                         <div>
-                            <a href=""><button class="btn-filter-4"><span>Cancelado</span></button></a>
+                            @if ($venda->parcela_status == 0)
+                                <button class="btn-filter-4"><span>Cancelado</span></button>
+                            @elseif ($venda->parcela_status == 1)
+                                <button class="btn-filter-3"><span>Pendente</span></button>
+                            @elseif ($venda->parcela_status == 2)
+                                <button class="btn-filter-2"><span>Pago</span></button>
+                            @elseif ($venda->parcela_status == 4)
+                                <button class="btn-filter-4"><span>Cancelado</span></button>
+                            @elseif ($venda->parcela_status == 5)
+                                <button class="btn-filter-4"><span>Cancelado</span></button>
+                            @endif
+
                         </div>
                     </div>
                     <div class="grid-item">

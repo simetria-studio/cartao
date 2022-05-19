@@ -25,7 +25,7 @@ class PainelController extends Controller
         $response = json_decode($response);
         $clientess = collect($response);
         $vendas = $clientess['data'];
-     
+        // dd($vendas);
         return view('painel.pedidos', get_defined_vars());
     }
 }
