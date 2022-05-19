@@ -28,5 +28,5 @@ Route::get('/', [FrontController::class, 'index'])->name('index');
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [PainelController::class, 'index'])->name('admin.index');
-    Route::get('pedidos', [PainelController::class, 'index'])->name('admin.pedidos');
+    Route::get('pedidos', [PainelController::class, 'pedidos'])->name('admin.pedidos');
 });

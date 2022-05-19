@@ -1,4 +1,17 @@
 @extends('layouts.painel')
 @section('content')
-    <h2>PEDIDOS</h2>
+    <div class="filter-grid">
+        <div>
+            <a href=""><button class="btn-filter-1"><span>Todos</span></button></a>
+        </div>
+        <div>
+            <a href=""><button class="btn-filter-2"><span>Pago</span></button></a>
+        </div>
+        <div>
+            <a href=""><button class="btn-filter-3"><span>Pendente</span></button></a>
+        </div>
+        <div>
+            <a href=""><button class="btn-filter-4"><span>Cancelado</span></button></a>
+        </div>
+    </div>
 @endsection

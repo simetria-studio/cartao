@@ -1,0 +1,66 @@
+.filter-grid {
+    display: grid;
+    grid-template-columns: 162px 162px 162px 162px;
+    margin-top: 2em;
+    gap: 20px;
+}
+
+.btn-filter-1 {
+
+    width: 162px;
+    height: 45px;
+    z-index: 10;
+    background: #DEE3ED;
+    border: none;
+    border-radius: 22.5px;
+    font-weight: 700;
+
+    span {
+        color: #192655;
+    }
+}
+
+.btn-filter-2 {
+
+    width: 162px;
+    height: 45px;
+    z-index: 10;
+    background: #E2EEED;
+    border: none;
+    border-radius: 22.5px;
+    font-weight: 700;
+
+    span {
+        color: #3A974C;
+    }
+}
+
+.btn-filter-3 {
+
+    width: 162px;
+    height: 45px;
+    z-index: 10;
+    background: #F4EEEB;
+    border: none;
+    border-radius: 22.5px;
+    font-weight: 700;
+
+    span {
+        color: #F29339;
+    }
+}
+
+.btn-filter-4 {
+
+    width: 162px;
+    height: 45px;
+    z-index: 10;
+    background: #F1E2E9;
+    border: none;
+    border-radius: 22.5px;
+    font-weight: 700;
+
+    span {
+        color: #D11A2A;
+    }
+}
