@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="pedidos-body">
-        @foreach ($clientes as $cliente)
+        @foreach ($vendas as $venda)
             <div class="item-pedido">
                 <div class="pedido-list">
                     <div class="">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="grid-item">
-                        <h5>#000{{ $cliente->id }}</h5>
+                        <h5>#000{{ $venda->id }}</h5>
                     </div>
                     <div class="grid-item">
                         <div>
@@ -86,7 +86,7 @@
                             <img src="{{ asset('painel/img/icons/user-green.svg') }}" alt="">
                         </div>
                         <div>
-                            <h5>{{ $cliente->nome }}</h5>
+                            <h5>{{ $venda->cliente }}</h5>
                         </div>
                     </div>
                     <div class="grid-item">
@@ -94,7 +94,7 @@
                             <img src="{{ asset('painel/img/icons/calendar.svg') }}" alt="">
                         </div>
                         <div>
-                            <h5>{{ $cliente->data_cadastro }}</h5>
+                            <h5>data</h5>
                         </div>
                     </div>
                     <div>

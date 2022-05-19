@@ -17,14 +17,15 @@ class PainelController extends Controller
         $client = new Client();
         $res = $client->request(
             'GET',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/clientes/?id=2&id=3&_expand=contatos,cartoes',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/',
             ['auth' => [$apiKey, '']]
         );
 
         $response = (string) $res->getBody();
         $response = json_decode($response);
         $clientess = collect($response);
-        $clientes = $clientess['data'];
+        $vendas = $clientess['data'];
+     
         return view('painel.pedidos', get_defined_vars());
     }
 }
