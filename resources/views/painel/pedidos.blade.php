@@ -63,6 +63,9 @@
     </div>
     <div class="pedidos-body">
         @foreach ($vendas as $venda)
+        @php
+            $date = new DateTime($venda->email_enviado)
+        @endphp
             <div class="item-pedido">
                 <div class="pedido-list">
                     <div class="">
@@ -94,8 +97,7 @@
                             <img src="{{ asset('painel/img/icons/calendar.svg') }}" alt="">
                         </div>
                         <div>
-                            <h5>{{ $venda->email_enviado ?? '
-                                2022-05-18T13:42:08+00:00' }}</h5>
+                            <h5>{{ date_format($date, 'd/m/Y') ?? '18/05/2022' }}</h5>
                         </div>
                     </div>
                     <div>
