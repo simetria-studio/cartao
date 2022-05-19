@@ -67,11 +67,11 @@
 
 .table-headling {
     display: grid;
-    grid-template-columns: 15px auto auto auto auto auto;
+    grid-template-columns: 15px 1fr 1fr 1fr 1fr 1fr ;
     margin-top: 1em;
     align-items: center;
     gap: 30px;
-    padding-right: 5em;
+    padding-right: 7em;
     padding-left: 2em;
 
     select {
@@ -121,6 +121,21 @@
 .grid-item{
     display: grid;
     grid-template-columns: 40px auto;
+    align-items: baseline;
+}
+.grid-item-a{
+    display: grid;
+    grid-template-columns: 40px 100%;
+    align-items: baseline;
+}
+.grid-item-b{
+    display: grid;
+    grid-template-columns: 30px 180px;
+    align-items: baseline;
+}
+.grid-item-c{
+    display: grid;
+    grid-template-columns: 30px 1fr;
     align-items: baseline;
 }
 

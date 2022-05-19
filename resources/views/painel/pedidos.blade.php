@@ -73,7 +73,7 @@
                     <div class="grid-item">
                         <h5>#000{{ $venda->id }}</h5>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item-a">
                         <div>
                             <img src="{{ asset('painel/img/default.png') }}" alt="">
                         </div>
@@ -81,7 +81,7 @@
                             <h5>Venda Direta</h5>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item-b">
                         <div>
                             <img src="{{ asset('painel/img/icons/user-green.svg') }}" alt="">
                         </div>
@@ -89,12 +89,13 @@
                             <h5>{{ $venda->cliente }}</h5>
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item-c">
                         <div>
                             <img src="{{ asset('painel/img/icons/calendar.svg') }}" alt="">
                         </div>
                         <div>
-                            <h5>data</h5>
+                            <h5>{{ $venda->email_enviado ?? '
+                                2022-05-18T13:42:08+00:00' }}</h5>
                         </div>
                     </div>
                     <div>
