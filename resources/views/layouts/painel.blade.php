@@ -38,7 +38,7 @@
                                 alt=""> Comissões</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/user.svg') }}" alt="">
+                        <a class="nav-link" href="{{ route('clientes') }}"><img src="{{ asset('painel/img/icons/user.svg') }}" alt="">
                             Clientes</a>
                     </li>
                     <li class="nav-item">

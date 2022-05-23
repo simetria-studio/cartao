@@ -23,3 +23,23 @@ if (!function_exists('get_pedidos')) {
     }
 }
 
+if (!function_exists('get_clientes')) {
+    function get_clientes()
+    {
+        $apiKey = env('KEY_FATURA_SIMPLES');
+        $client = new Client();
+        $res = $client->request(
+            'GET',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/clientes/?_expand=contatos',
+            ['auth' => [$apiKey, '']]
+        );
+
+        $response = (string) $res->getBody();
+        $response = json_decode($response);
+        $clientess = collect($response);
+        $clientes =  collect($clientess['data']);
+
+        return $clientes;
+    }
+}
+

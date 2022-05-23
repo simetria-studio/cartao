@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\InfluencerController;
 use App\Http\Controllers\PainelController;
@@ -36,4 +37,6 @@ Route::prefix('admin')->group(function () {
     Route::get('influencers', [InfluencerController::class, 'index'])->name('influencers');
     Route::post('influencers-store', [InfluencerController::class, 'store'])->name('influencers.store');
     Route::get('busca-cep', [InfluencerController::class, 'buscaCep']);
+
+    Route::get('clientes', [ClientesController::class, 'index'])->name('clientes');
 });
