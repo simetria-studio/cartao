@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
+
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+
 
 class PainelController extends Controller
 {
@@ -13,19 +16,54 @@ class PainelController extends Controller
     }
     public function pedidos()
     {
-        $apiKey = env('KEY_FATURA_SIMPLES');
-        $client = new Client();
-        $res = $client->request(
-            'GET',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/',
-            ['auth' => [$apiKey, '']]
-        );
 
-        $response = (string) $res->getBody();
-        $response = json_decode($response);
-        $clientess = collect($response);
-        $vendas =  collect($clientess['data']);
-        // dd($vendas->where('id', 40));
+        $vendas =  get_pedidos();
+
         return view('painel.pedidos', get_defined_vars());
+    }
+    public function filterId(Request $request)
+    {
+        if ($request->ajax()) {
+            if ($request->valor == 1) {
+                $vendas =  get_pedidos()->sortBy('id');
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->valor == 2) {
+                $vendas =  get_pedidos()->sortByDesc('id');
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->valor == 0) {
+                $vendas =  get_pedidos();
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+        }
+    }
+    public function filterStatus(Request $request)
+    {
+        if ($request->ajax()) {
+            if ($request->status == 2) {
+                $vendas =  get_pedidos()->where('parcela_status', 2);
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->status == 1) {
+                $vendas =  get_pedidos();
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->status == 3) {
+                $vendas =  get_pedidos()->where('parcela_status', 1);
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->status == 4) {
+                $vendas =  get_pedidos()->where('parcela_status', 4)->orWhere('parcela_status', 5);
+                $view = view('painel.render.pedidos', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+        }
     }
 }

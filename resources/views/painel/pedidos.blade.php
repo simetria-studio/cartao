@@ -2,16 +2,16 @@
 @section('content')
     <div class="filter-grid">
         <div>
-            <a href=""><button class="btn-filter-1"><span>Todos</span></button></a>
+            <button class="btn-filter-1 btn-status" data-value="1"><span>Todos</span></button>
         </div>
         <div>
-            <a href=""><button class="btn-filter-2"><span>Pago</span></button></a>
+            <button class="btn-filter-2 btn-status" data-value="2"><span>Pago</span></button>
         </div>
         <div>
-            <a href=""><button class="btn-filter-3"><span>Pendente</span></button></a>
+            <button class="btn-filter-3 btn-status"  data-value="3"><span>Pendente</span></button>
         </div>
         <div>
-            <a href=""><button class="btn-filter-4"><span>Cancelado</span></button></a>
+            <button class="btn-filter-4 btn-status"  data-value="4"><span>Cancelado</span></button>
         </div>
     </div>
     <div class="table-headling">
@@ -21,42 +21,42 @@
             </div>
         </div>
         <div>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>ID Pedido</option>
+            <select class="form-select" id="select_id" aria-label="Default select example">
+                <option selected value="0">ID Pedido</option>
                 <option value="1">ASC</option>
                 <option value="2">DESC</option>
             </select>
         </div>
-        <div>
+        {{-- <div>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Influencer</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-        </div>
-        <div>
+        </div> --}}
+        {{-- <div>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Cliente</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-        </div>
-        <div>
+        </div> --}}
+        {{-- <div>
             <select class="form-select" aria-label="Default select example">
                 <option selected>Data</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
-        </div>
+        </div> --}}
         <div>
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Status</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-select" id="select_status" aria-label="Default select example">
+                <option value="1" selected>Status</option>
+                <option value="2">Pago</option>
+                <option value="3">Pedente</option>
+                <option value="4">Cancelado</option>
             </select>
         </div>
     </div>
