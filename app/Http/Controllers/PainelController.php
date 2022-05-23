@@ -18,7 +18,7 @@ class PainelController extends Controller
     {
 
         $vendas =  get_pedidos();
-
+        // dd($vendas);
         return view('painel.pedidos', get_defined_vars());
     }
     public function filterId(Request $request)

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\InfluencerController;
 use App\Http\Controllers\PainelController;
 use App\Http\Controllers\TesteApiController;
 use Illuminate\Support\Facades\Route;
@@ -31,4 +32,8 @@ Route::prefix('admin')->group(function () {
     Route::get('pedidos', [PainelController::class, 'pedidos'])->name('admin.pedidos');
     Route::get('filter-by-id', [PainelController::class, 'filterId']);
     Route::get('filter-by-status', [PainelController::class, 'filterStatus']);
+
+    Route::get('influencers', [InfluencerController::class, 'index'])->name('influencers');
+    Route::post('influencers-store', [InfluencerController::class, 'store'])->name('influencers.store');
+    Route::get('busca-cep', [InfluencerController::class, 'buscaCep']);
 });

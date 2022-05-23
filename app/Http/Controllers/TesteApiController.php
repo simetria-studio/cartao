@@ -31,6 +31,7 @@ class TesteApiController extends Controller
                     "metodo_cobranca" => 3, // aguardar pagamento para emitir FS
                     "email_enviar" => 1,
                     'sms_enviar' => 1,
+                    "custom_vendedor" => 'Felipe Cruz',
                     "valor_venda" => 1.00,
                     "nfse_dados" => [
                         "rps_tipo" => 1,

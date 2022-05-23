@@ -42,8 +42,8 @@
                             Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/bullhorn.svg') }}"
-                                alt=""> Influencers</a>
+                        <a class="nav-link" href="{{ route('influencers') }}"><img
+                                src="{{ asset('painel/img/icons/bullhorn.svg') }}" alt=""> Influencers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><img
@@ -89,7 +89,24 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('painel/js/script.js') }}"></script>
+
+    @if (Session::has('success'))
+        <script type="text/javascript">
+            Swal.fire({
+                title: 'Sucesso!',
+                icon: 'success',
+                text: "{{ Session::get('success') }}",
+                timer: 5000,
+                type: 'success'
+            }).then((result) => {
+                // Reload the Page
+                location.reload();
+            });
+        </script>
+    @endif
 </body>
 
 </html>
