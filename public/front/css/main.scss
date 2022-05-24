@@ -283,21 +283,155 @@ footer {
     }
 }
 
+.modal {
+    --bs-modal-width: 588px !important;
+}
+
 .up-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+
+    .ac {
+        border-left: 2px solid #A3FADD;
+        border-right: 2px solid #A3FADD;
+    }
 
     h3 {
         font-weight: 900;
         font-size: 18.193px;
         line-height: 19px;
         /* or 107% */
-
-        display: flex;
-        align-items: center;
         letter-spacing: -0.05em;
 
         color: #192655;
-        
+
+        span {
+            color: #00BBAB;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14.3902px;
+        line-height: 22px;
+        letter-spacing: -0.04em;
+
+        color: #000000;
+    }
+}
+
+.middle-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2em 0;
+
+    h1 {
+        font-weight: 900;
+        font-size: 47.2347px;
+        line-height: 51px;
+        letter-spacing: -0.05em;
+
+        color: #192655;
+
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 14.3902px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.04em;
+        padding: 0 5em;
+        color: #000000;
+    }
+}
+
+.bottom-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+    text-align: center;
+
+    p {
+        font-weight: 400;
+        font-size: 14.3902px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.04em;
+
+        color: #000000;
+    }
+}
+
+.fade-line {
+    // width: ;
+    background-color: #000000a8;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+.request-card {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    width: 0;
+    height: 100vh;
+    right: 0;
+
+    h4 {
+        font-weight: 900;
+        font-size: 17.6193px;
+        line-height: 19px;
+        /* or 107% */
+        letter-spacing: -0.05em;
+
+        color: #192655;
+
+        span {
+            color: #00BBAB;
+        }
+    }
+
+    .content-top {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1em 0;
+    }
+
+    .middle-text {
+        p {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 22px;
+            letter-spacing: -0.04em;
+            text-align: center;
+            color: #000000;
+        }
+    }
+
+    .form-card {
+        input {
+            background: #E4F4EF !important;
+            border-radius: 8.03306px !important;
+            border: none;
+            padding: 1em;
+        }
+    }
+
+    .btn-next {
+        width: 193px;
+        height: 53px;
+        left: 314px;
+        top: 506px;
+        margin-top: 2em;
+        background: #192655;
+        border-radius: 8px;
+        color: #fff;
     }
 }

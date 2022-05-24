@@ -40,3 +40,4 @@ Route::prefix('admin')->group(function () {
 
     Route::get('clientes', [ClientesController::class, 'index'])->name('clientes');
 });
+

@@ -21,7 +21,7 @@
         <div class="custom-container">
             <div class="header-grid">
                 <div class="logo">
-                    <img src="{{ asset('front/img/logo.svg') }}" alt="">
+                   <a href="{{ route('index') }}"> <img src="{{ asset('front/img/logo.svg') }}" alt=""></a>
                 </div>
                 <div class="agenda" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div>
@@ -96,7 +96,7 @@
                             <div>
                                 <img src="{{ asset('front/img/logo.svg') }}" alt="">
                             </div>
-                            <div>
+                            <div class="ac">
                                 <h3>AGENDAR SUA <span>CONSULTA</span></h3>
                             </div>
                             <div>
@@ -129,6 +129,63 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="fade-line"> </div>
+    <div class="request-card">
+        <div class="container">
+            <div class="content-top">
+                <div>
+                    <img src="{{ asset('front/img/logo.svg') }}" alt="">
+                </div>
+                <div>
+                    <h4>Consultas médicas a partir de <span>R$ 24</span></h4>
+                </div>
+                <div>
+                    <h4>Medicamentos com até <span>35% de desconto</span></h4>
+                </div>
+            </div>
+            <div class="middle-text">
+                <p>Os seus dados serão utilizados apenas para realização de cadastro.</p>
+            </div>
+            <div>
+                <div class="row form-card" id="form-pay">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="mb-3 col-md-12">
+                                <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">CPF</label>
+                                <input type="text" name="cpf" class="form-control">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Data de
+                                    Nascimento</label>
+                                <input type="text" name="data_nascimento" class="form-control">
+                            </div>
+
+
+                            <div class="mb-3 col-md-12">
+                                <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+                                <input type="email" name="email" class="form-control">
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Celular</label>
+                                <input type="text" name="celular" class="form-control">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <button type="button" class="btn btn-next" id="cadbutton">Próximo</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
