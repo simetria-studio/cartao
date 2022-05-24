@@ -26,6 +26,7 @@ Route::get('teste-data', [TesteApiController::class, 'testeData']);
 Route::any('client-insert', [TesteApiController::class, 'insertClient'])->name('client.insert');
 
 Route::get('/', [FrontController::class, 'index'])->name('index');
+Route::get('/club-de-beneficios', [FrontController::class, 'club'])->name('club');
 
 
 Route::prefix('admin')->group(function () {

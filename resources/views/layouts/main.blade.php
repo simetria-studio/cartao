@@ -21,7 +21,7 @@
         <div class="custom-container">
             <div class="header-grid">
                 <div class="logo">
-                   <a href="{{ route('index') }}"> <img src="{{ asset('front/img/logo.svg') }}" alt=""></a>
+                    <a href="{{ route('index') }}"> <img src="{{ asset('front/img/logo.svg') }}" alt=""></a>
                 </div>
                 <div class="agenda" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <div>
@@ -31,7 +31,7 @@
                         <h4>Agendar consulta</h4>
                     </div>
                 </div>
-                <div class="club">
+                <div class="club" onclick="routeClub()">
                     <div>
                         <img src="{{ asset('front/img/discount.svg') }}" alt="">
                     </div>
@@ -190,6 +190,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('front/js/script.js') }}"></script>
+    <script>
+        function routeClub() {
+            window.location.href = "{{ route('club') }}"
+        }
+    </script>
 </body>
 
 </html>

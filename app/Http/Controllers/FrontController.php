@@ -10,4 +10,8 @@ class FrontController extends Controller
     {
         return view('front.index');
     }
+    public function club()
+    {
+        return view('front.club');
+    }
 }
