@@ -209,6 +209,7 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    gap: 30px;
 
     .smile-grid {
         display: grid;
@@ -436,6 +437,7 @@ footer {
         color: #fff;
     }
 }
+
 .hero-club {
     background-image: url('../img/background2.png');
     width: 100%;
@@ -466,7 +468,8 @@ footer {
             color: #192655;
             line-height: 1;
             letter-spacing: -0.05em;
-            span{
+
+            span {
                 color: #00BBAB;
             }
         }
