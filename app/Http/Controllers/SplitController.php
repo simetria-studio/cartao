@@ -59,9 +59,7 @@ class SplitController extends Controller
     {
 
         $path = $request->comprovante->store('/comprovantes', ['disk' =>   'local']);
-        if (!file_exists($path)) {
-            mkdir($path, 0777, true);
-        }
+  
         $dados = SplitPayment::create([
             'id_pedido' => $request->id_pedido,
             'valor_total' => $request->valor_total,
