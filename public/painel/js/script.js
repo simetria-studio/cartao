@@ -55,7 +55,7 @@ $('#telefone').mask('(99) 99999-9999');
 
 //end masks
 
-$('.percent').on('click', function () {
+$(document).on('click', '.percent', function () {
     var id = $(this).data('id');
     var id_pedido = $(`.input_pedido_${id}`).val();
     var id_influencer = $(`.input_influencer_${id}`).val();
@@ -82,7 +82,7 @@ $('.percent').on('click', function () {
     })
 
 });
-$('.trash').on('click', function () {
+$(document).on('click', '.trash', function () {
     var id = $(this).data('id');
     var id_pedido = $(`.input_pedido_${id}`).val();
     var id_influencer = $(`.input_influencer_${id}`).val();
