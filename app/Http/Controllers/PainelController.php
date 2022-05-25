@@ -61,7 +61,7 @@ class PainelController extends Controller
                 return response()->json(get_defined_vars());
             }
             if ($request->status == 4) {
-                $vendas =  get_pedidos()->where('parcela_status', 4)->orWhere('parcela_status', 5);
+                $vendas =  get_pedidos()->whereIn('parcela_status',[4, 5]);
                 $view = view('painel.render.pedidos', get_defined_vars())->render();
                 return response()->json(get_defined_vars());
             }
