@@ -52,7 +52,7 @@
             </select>
         </div> --}}
         <div>
-            <select class="form-select" id="select_status" aria-label="Default select example">
+            <select class="form-select filter-status" id="select_status" aria-label="Default select example">
                 <option value="1" selected>Status</option>
                 <option value="2">Pago</option>
                 <option value="3">Pedente</option>

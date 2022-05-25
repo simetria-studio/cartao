@@ -12,14 +12,14 @@ $("#select_id").on('change', function () {
     });
 });
 
-$(".classe-do-select").on('change', function () {
+$(document).on('change','.filter-status', function () {
     var optionSelected = $(this).find("option:selected");
     var valor = optionSelected.val();
     $.ajax({
-        url: "url",
+        url: "filter-by-status",
         data: { status: valor },
         success: function (data) {
-            $('.classe-pai-do-elemento').html(data.view)
+            $('.pedidos-body').html(data.view)
         }
     });
 });
