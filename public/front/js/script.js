@@ -35,11 +35,11 @@ $("#paybutton").click(function () {
 });
 $('.btn-card').on('click', function () {
     $(".request-card").animate({ width: '588px' }, 350);
-    $(".fade-line").animate({ width: '100%' }, 350);
+    $(".fade-line").animate({ width: '100%' }, 0);
 
 });
 $('.fade-line').on('click', function () {
     $(".request-card").animate({ width: '0' }, 350);
-    $(".fade-line").animate({ width: '0' }, 350);
+    $(".fade-line").animate({ width: '0' }, 0);
 
 });
