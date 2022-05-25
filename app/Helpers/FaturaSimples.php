@@ -42,4 +42,16 @@ if (!function_exists('get_clientes')) {
         return $clientes;
     }
 }
-
+if (!function_exists('delete_venda')) {
+    function delete_venda($id)
+    {
+        $apiKey = env('KEY_FATURA_SIMPLES');
+        $client = new Client();
+        $res = $client->request(
+            'DELETE',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/'.$id.'',
+            ['auth' => [$apiKey, '']]
+        );
+        return $res->getBody();
+    }
+}

@@ -81,7 +81,7 @@ class TesteApiController extends Controller
         $client = new Client();
         $res = $client->request(
             'DELETE',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/clientes/43',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/39',
             ['auth' => [$apiKey, '']]
         );
 

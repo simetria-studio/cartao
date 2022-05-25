@@ -134,9 +134,10 @@
                         <div class="percent" data-id="{{ $key }}">
                             <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
                         </div>
-                        <div class="more">
-                            <a href="#">...</a>
+                        <div class="trash" data-id="{{ $key }}">
+                            <img src="{{ asset('painel/img/icons/trash.svg') }}" alt="">
                         </div>
+
                     </div>
                 </div>
             </div>

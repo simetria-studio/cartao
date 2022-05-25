@@ -82,12 +82,41 @@ $('.percent').on('click', function () {
     })
 
 });
+$('.trash').on('click', function () {
+    var id = $(this).data('id');
+    var id_pedido = $(`.input_pedido_${id}`).val();
+    var id_influencer = $(`.input_influencer_${id}`).val();
+    Swal.fire({
+        title: 'Deletar essa venda?',
+        // text: "You won't be able to revert this!",
+        icon: 'error',
+        showCancelButton: true,
+        confirmButtonColor: 'green',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, eu quero deletar!',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "delete-venda",
+                data: { id_pedido: id_pedido },
+                success: function (data) {
+                    console.log(data);
+                    document.location.reload(true);
+                }
+            });
+        }
+    })
+
+});
+
+
 $('.payment-modal').on('click', function () {
     var dados = $(this).data('dados')
     var valor1 = parseFloat(dados.valor_total);
     var valor2 = parseFloat(dados.valor);
-    var valorTotal = valor1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-    var comissao = valor2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    var valorTotal = valor1.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+    var comissao = valor2.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     console.log(dados);
     $('#pedido').val(dados.id);
     $('#total').val(valorTotal);

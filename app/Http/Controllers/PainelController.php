@@ -67,4 +67,11 @@ class PainelController extends Controller
             }
         }
     }
+
+    public function deleteVenda(Request $request)
+    {
+        $id = $request->id_pedido;
+        $delete = delete_venda($id);
+        return response()->json($delete);
+    }
 }
