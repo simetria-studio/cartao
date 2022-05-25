@@ -126,14 +126,18 @@
                                 $valor = $item->valor;
                             }
                         @endphp
-                        <input type="hidden" class="input_pedido_{{ $key }}" name="id_pedido" value="{{ $venda->id }}">
-                        <input type="hidden" class="input_influencer_{{ $key }}" name="id_influencer" value="{{ $pedido->influencer->id ?? 0 }}">
+                        <input type="hidden" class="input_pedido_{{ $key }}" name="id_pedido"
+                            value="{{ $venda->id }}">
+                        <input type="hidden" class="input_influencer_{{ $key }}" name="id_influencer"
+                            value="{{ $pedido->influencer->id ?? 0 }}">
                         <input type="hidden" name="valor" value="{{ $valor }}">
                     </div>
                     <div class="grid-item">
-                        <div class="percent" data-id="{{ $key }}">
-                            <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
-                        </div>
+                        @if (isset($pedido->influencer))
+                            <div class="percent" data-id="{{ $key }}">
+                                <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
+                            </div>
+                        @endif
                         <div class="trash" data-id="{{ $key }}">
                             <img src="{{ asset('painel/img/icons/trash.svg') }}" alt="">
                         </div>
