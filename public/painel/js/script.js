@@ -1,4 +1,4 @@
-$("#select_id").on('change', function () {
+$(document).on('change','#select_id', function () {
 
     var optionSelected = $(this).find("option:selected");
     var valor = optionSelected.val();
@@ -111,7 +111,7 @@ $(document).on('click', '.trash', function () {
 });
 
 
-$('.payment-modal').on('click', function () {
+$(document).on('click','.payment-modal', function () {
     var dados = $(this).data('dados')
     var valor1 = parseFloat(dados.valor_total);
     var valor2 = parseFloat(dados.valor);
