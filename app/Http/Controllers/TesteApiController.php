@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pedido;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -33,6 +34,7 @@ class TesteApiController extends Controller
                     'sms_enviar' => 1,
                     "custom_vendedor" => 'Felipe Cruz',
                     "valor_venda" => 1.00,
+                    "custom_field" => 1,
                     "nfse_dados" => [
                         "rps_tipo" => 1,
                         "rps_serie" => "FSIMP",
@@ -61,6 +63,14 @@ class TesteApiController extends Controller
                 ]
             ]
         );
+        $response = (string) $res->getBody();
+        $response = json_decode($response);
+        $clientess = collect($response);
+        $clientes =  collect($clientess);
+        $pedido = Pedido::create([
+            'id_pedido' => $clientes['id'],
+            'id_influencer' => 1,
+        ]);
 
         return view('front.thanks');
     }

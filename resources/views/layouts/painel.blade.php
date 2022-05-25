@@ -34,7 +34,7 @@
                                 src="{{ asset('painel/img/icons/shopping-cart.svg') }}" alt=""> Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="{{ asset('painel/img/icons/percent.svg') }}"
+                        <a class="nav-link" href="{{ route('splits') }}"><img src="{{ asset('painel/img/icons/percent.svg') }}"
                                 alt=""> Comissões</a>
                     </li>
                     <li class="nav-item">

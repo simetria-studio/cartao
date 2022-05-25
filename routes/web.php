@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\InfluencerController;
 use App\Http\Controllers\PainelController;
+use App\Http\Controllers\SplitController;
 use App\Http\Controllers\TesteApiController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,5 +41,9 @@ Route::prefix('admin')->group(function () {
     Route::get('busca-cep', [InfluencerController::class, 'buscaCep']);
 
     Route::get('clientes', [ClientesController::class, 'index'])->name('clientes');
+
+    Route::get('split-store', [SplitController::class, 'store']);
+    Route::get('splits', [SplitController::class, 'index'])->name('splits');
+    Route::post('split-payment', [SplitController::class, 'payment'])->name('split.payment');
 });
 

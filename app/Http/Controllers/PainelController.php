@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 
+use App\Models\Pedido;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
