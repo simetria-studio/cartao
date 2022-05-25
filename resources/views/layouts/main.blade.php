@@ -114,7 +114,7 @@
                         </div>
                     </div>
                     <div class="bottom-content">
-                        <div>
+                        <div class="img-medico">
                             <img src="{{ asset('front/img/pic3.png') }}" alt="">
                         </div>
                         <div>
@@ -122,7 +122,7 @@
                                 <p>Para agendar a consulta você precisa ter cadastro no Cartão com você.</p>
                             </div>
                             <div>
-                                <button class="btn btn-card">Peça seu cartão</button>
+                                <button class="btn btn-card" data-bs-dismiss="modal">Peça seu cartão</button>
                             </div>
                         </div>
                     </div>
