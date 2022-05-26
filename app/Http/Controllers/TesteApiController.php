@@ -91,6 +91,15 @@ class TesteApiController extends Controller
     public function insertClient(Request $request)
     {
         // dd($request->all());
+        $mensagens = [
+            'cpf.required' => 'required',
+            'cpf.cpf' => 'invalido',
+        ];
+
+        $this->validate($request, [
+            'cpf' => 'required|cpf',
+        ], $mensagens);
+
         if ($request->ajax()) {
             $apiKey = env('KEY_FATURA_SIMPLES');
             $client = new Client();

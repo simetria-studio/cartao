@@ -16,8 +16,26 @@ $("#cadbutton").click(function () {
         url: "client-insert",
         data: { name: name, cpf: cpf, data_nascimento: data_nascimento, genero: genero, email: email, celular: celular, telefone: telefone, },
         success: function (data) {
-            console.log(data[0].view);
             $('#form-pay').html(data[0].view)
+        },
+        error: function (error) {
+            console.log(error.responseJSON.errors.cpf)
+            if (error.responseJSON.errors.cpf == 'required') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'O CPF é obrigatório',
+                    // footer: '<a href="">Why do I have this issue?</a>'
+                })
+            }
+            if (error.responseJSON.errors.cpf == 'invalido') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'O CPF é invalido',
+                    // footer: '<a href="">Why do I have this issue?</a>'
+                })
+            }
         }
     });
 });
@@ -48,6 +66,6 @@ $('#telefone').mask('(99) 99999-9999');
 $('#data').mask('99/99/9999');
 
 
-function minhaConta(){
+function minhaConta() {
     window.open('https://cartaocomvoce.faturasimples.com.br/area-cliente/login/', '_blank');
 }
