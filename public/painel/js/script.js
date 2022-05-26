@@ -117,7 +117,7 @@ $(document).on('click', '.payment-modal', function () {
     var valor2 = parseFloat(dados.valor);
     var valorTotal = valor1.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     var comissao = valor2.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-    console.log(dados);
+
     $('#pedido').val(dados.id);
     $('#total').val(valorTotal);
     $('#comissao').val(comissao);
@@ -125,4 +125,8 @@ $(document).on('click', '.payment-modal', function () {
     $('#influencer').val(dados.influencer);
     $('#id_influencer').val(dados.id_influencer);
     $('#split').val(dados.id);
+    if(dados.status == 1){
+        $('.upfile').addClass('d-none');
+        $('.modal-footer').addClass('d-none');
+    }
 });

@@ -187,7 +187,7 @@
                                         <label for="exampleFormControlInput1" class="form-label">Influencer</label>
                                         <input type="text" class="form-control" name="influencer" id="influencer">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-3 upfile">
                                         <label for="formFile" class="form-label">Carregar comprovante</label>
                                         <input class="form-control" type="file" name="comprovante" id="formFile">
                                     </div>
