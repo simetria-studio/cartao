@@ -32,4 +32,24 @@ class ClientesController extends Controller
             ]
         );
     }
+    public function filterId(Request $request)
+    {
+        if ($request->ajax()) {
+            if ($request->valor == 1) {
+                $clientes =  $this->paginate(get_clientes()->sortBy('id'));
+                $view = view('painel.render.clientes', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->valor == 2) {
+                $clientes =  $this->paginate(get_clientes()->sortByDesc('id'));
+                $view = view('painel.render.clientes', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+            if ($request->valor == 0) {
+                $clientes =  $this->paginate(get_clientes());
+                $view = view('painel.render.clientes', get_defined_vars())->render();
+                return response()->json(get_defined_vars());
+            }
+        }
+    }
 }

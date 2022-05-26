@@ -125,8 +125,21 @@ $(document).on('click', '.payment-modal', function () {
     $('#influencer').val(dados.influencer);
     $('#id_influencer').val(dados.id_influencer);
     $('#split').val(dados.id);
-    if(dados.status == 1){
+    if (dados.status == 1) {
         $('.upfile').addClass('d-none');
         $('.modal-footer').addClass('d-none');
     }
+});
+$(document).on('change', '#select_id-clientes', function () {
+
+    var optionSelected = $(this).find("option:selected");
+    var valor = optionSelected.val();
+
+    $.ajax({
+        url: "filter-by-id-clientes",
+        data: { valor: valor },
+        success: function (data) {
+            $('.pedidos-body').html(data.view)
+        }
+    });
 });

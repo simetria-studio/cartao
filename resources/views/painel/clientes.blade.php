@@ -22,7 +22,7 @@
             </div>
         </div>
         <div>
-            <select class="form-select" id="select_id" aria-label="Default select example">
+            <select class="form-select" id="select_id-clientes" aria-label="Default select example">
                 <option selected value="0">ID</option>
                 <option value="1">ASC</option>
                 <option value="2">DESC</option>

@@ -19,7 +19,7 @@ $("#cadbutton").click(function () {
             $('#form-pay').html(data[0].view)
         },
         error: function (error) {
-            console.log(error.responseJSON.errors.cpf)
+            // console.log(error.responseJSON.errors.cpf)
             if (error.responseJSON.errors.cpf == 'required') {
                 Swal.fire({
                     icon: 'error',

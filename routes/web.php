@@ -47,5 +47,7 @@ Route::prefix('admin')->group(function () {
     Route::post('split-payment', [SplitController::class, 'payment'])->name('split.payment');
 
     Route::get('delete-venda', [PainelController::class, 'deleteVenda']);
+
+    Route::get('filter-by-id-clientes', [ClientesController::class, 'filterId']);
 });
 
