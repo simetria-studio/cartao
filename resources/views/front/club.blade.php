@@ -6,7 +6,7 @@
                 <h2>Até 75% de desconto<br> <span>em milhares de<br> estabelecimentos<br> em todo o País</span></h2>
             </div>
             <div>
-                <button class="btn btn-add">ACESSE AQUI</button>
+               <a href="https://meu.clubeparcerias.com.br/" target="_blank"> <button class="btn btn-add">ACESSE AQUI</button></a>
             </div>
 
         </div>

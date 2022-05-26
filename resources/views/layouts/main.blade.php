@@ -51,11 +51,11 @@
                 <div>
                     <button class="btn btn-card">Peça seu cartão</button>
                 </div>
-                <div class="user">
+                <div class="user" onclick="minhaConta()">
                     <div>
                         <img src="{{ asset('front/img/password.svg') }}" alt="">
                     </div>
-                    <div>
+                    <div >
                         <h4>Minha conta</h4>
                     </div>
                 </div>
