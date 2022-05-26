@@ -157,10 +157,31 @@
     grid-template-columns: 1fr;
     align-items: baseline;
 }
+
 .grid-item-e {
     display: grid;
     grid-template-columns: 1fr;
     align-items: baseline;
+}
+
+.grid-item-f {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.grid-item-g {
+    display: grid;
+    grid-template-columns: 200px;
+    align-items: baseline;
+}
+
+.grid-item-h {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .custom-checkbox {
@@ -188,6 +209,7 @@
         a {
             padding: 0.5em;
             border-radius: 22.5px;
+
             .edit {
                 background-color: #FBE9EA !important;
             }

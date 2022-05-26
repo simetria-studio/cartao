@@ -73,7 +73,7 @@
                     <div class="grid-item">
                         <h5>#{{ $cliente->id }}</h5>
                     </div>
-                    <div class="grid-item-a">
+                    <div class="grid-item-f">
                         <div>
                             <img src="{{ asset('painel/img/default.png') }}" alt="">
                         </div>
@@ -81,7 +81,7 @@
                             <h5>{{ $cliente->nome }}</h5>
                         </div>
                     </div>
-                    <div class="grid-item-b">
+                    <div class="grid-item-g">
                         @php
                             $email = 'sem email cadastrado';
                             $celular = '(99) 99999-9999';
@@ -94,7 +94,7 @@
                             <h5>{{ $email ?? 'sem email cadastrado' }}</h5>
                         </div>
                     </div>
-                    <div class="grid-item-c">
+                    <div class="grid-item-h">
                         <div>
                             <img src="{{ asset('painel/img/icons/whatsapp.svg') }}" alt="">
                         </div>
@@ -115,7 +115,7 @@
 
                         </div>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item d-none">
                         <div>
                             <img src="{{ asset('painel/img/icons/file-download.svg') }}" alt="">
                         </div>
