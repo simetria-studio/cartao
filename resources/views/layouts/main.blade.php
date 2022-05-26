@@ -158,12 +158,12 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="exampleFormControlInput1" class="form-label">CPF</label>
-                                <input type="text" name="cpf" class="form-control">
+                                <input type="text" name="cpf" id="cpf" class="form-control">
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="exampleFormControlInput1" class="form-label">Data de
                                     Nascimento</label>
-                                <input type="text" name="data_nascimento" class="form-control">
+                                <input type="text" name="data_nascimento" id="data" class="form-control">
                             </div>
 
 
@@ -174,7 +174,7 @@
 
                             <div class="mb-3 col-md-6">
                                 <label for="exampleFormControlInput1" class="form-label">Celular</label>
-                                <input type="text" name="celular" class="form-control">
+                                <input type="text" name="celular" id="telefone" class="form-control">
                             </div>
                             <div class="mb-3 col-md-6">
                                 <button type="button" class="btn btn-next" id="cadbutton">Próximo</button>
@@ -190,6 +190,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="{{ asset('front/js/script.js') }}"></script>
     <script>
         function routeClub() {

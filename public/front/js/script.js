@@ -43,3 +43,6 @@ $('.fade-line').on('click', function () {
     $(".fade-line").animate({ width: '0' }, 0);
 
 });
+$('#cpf').mask('999.999.999-99');
+$('#telefone').mask('(99) 99999-9999');
+$('#data').mask('99/99/9999');
