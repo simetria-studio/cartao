@@ -175,4 +175,18 @@
 .more {
     cursor: pointer;
 
+    .dropdown-menu {
+        li {
+            margin: 0.8em 5px;
+        }
+
+        a {
+            padding: 0.5em;
+            border-radius: 22.5px;
+            .edit {
+                background-color: #FBE9EA !important;
+            }
+        }
+    }
+
 }
