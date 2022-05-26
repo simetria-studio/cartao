@@ -296,6 +296,12 @@ footer {
     align-items: center;
     text-align: center;
 
+    h5 {
+        text-align: left;
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
     .ac {
         border-left: 2px solid #A3FADD;
         border-right: 2px solid #A3FADD;
@@ -395,6 +401,7 @@ footer {
         letter-spacing: -0.05em;
 
         color: #192655;
+        padding: 0 0.8em;
 
         span {
             color: #00BBAB;
@@ -405,6 +412,7 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 1em 0;
+
     }
 
     .middle-text {
@@ -491,4 +499,3 @@ footer {
 .img-medico {
     margin-bottom: -16px;
 }
-
