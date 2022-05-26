@@ -138,7 +138,7 @@
                 <div>
                     <img src="{{ asset('front/img/logo.svg') }}" alt="">
                 </div>
-                <div>
+                <div class="border-color">
                     <h4>Consultas médicas a partir de <span>R$ 24</span></h4>
                 </div>
                 <div>

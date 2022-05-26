@@ -294,7 +294,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    text-align: center;
+    text-align: left;
 
     h5 {
         text-align: left;
@@ -313,7 +313,7 @@ footer {
         line-height: 19px;
         /* or 107% */
         letter-spacing: -0.05em;
-
+        padding: 0 0.5em;
         color: #192655;
 
         span {
@@ -392,7 +392,10 @@ footer {
     width: 0;
     height: 100vh;
     right: 0;
-
+    .border-color{
+        border-left: solid 2px #A3FADD;
+        border-right: solid 2px #A3FADD;
+    }
     h4 {
         font-weight: 900;
         font-size: 17.6193px;
@@ -401,7 +404,7 @@ footer {
         letter-spacing: -0.05em;
 
         color: #192655;
-        padding: 0 0.8em;
+        padding: 0 2em;
 
         span {
             color: #00BBAB;
