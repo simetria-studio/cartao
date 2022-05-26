@@ -126,9 +126,9 @@
                         <div class="dropdown more">
                             <a class="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                              <li><a class="dropdown-item edit" href="#">Action</a></li>
-                              <li><a class="dropdown-item delete" href="#">Another action</a></li>
-                              <li><a class="dropdown-item pay" href="#">Something else here</a></li>
+                              <li><a class="dropdown-item edit" href="#">Editar</a></li>
+                              <li><a class="dropdown-item delete" href="#">Deletar</a></li>
+                              <li><a class="dropdown-item pay" href="#">Comissão</a></li>
                             </ul>
                           </div>
                         {{-- <div class="more dropdown">
