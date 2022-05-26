@@ -28,7 +28,7 @@ class TesteApiController extends Controller
                     'agendamento_automatico' => 1, // realizar geração automaticamente
                     "discriminacao" => "Teste da Fatura Simples",
                     "id_cliente" => $request->id_user,
-                    "id_meio_pagamento" => 15,
+                    "id_meio_pagamento" => $request->payment_method,
                     "metodo_cobranca" => 3, // aguardar pagamento para emitir FS
                     "email_enviar" => 1,
                     'sms_enviar' => 1,
@@ -80,8 +80,8 @@ class TesteApiController extends Controller
         $apiKey = env('KEY_FATURA_SIMPLES');
         $client = new Client();
         $res = $client->request(
-            'DELETE',
-            'https://cartaocomvoce.faturasimples.com.br/api/v2/vendas/39',
+            'GET',
+            'https://cartaocomvoce.faturasimples.com.br/api/v2/meios-pagamento/',
             ['auth' => [$apiKey, '']]
         );
 
