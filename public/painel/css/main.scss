@@ -150,7 +150,7 @@ header {
         background: #F7F7FF !important;
         border: none !important;
         border-radius: 10px !important;
-        padding: 0.8em ;
+        padding: 0.8em;
     }
 }
 
@@ -161,13 +161,23 @@ header {
 .modal-footer {
     border: none !important;
 }
-.close{
+
+.close {
     background-color: #FFFFFF;
     color: #605BFF;
     border-color: #e0e0eb !important;
 }
-.add{
+
+.add {
     background-color: #605BFF !important;
     color: #fff !important;
     border: none !important;
+}
+
+.percent {
+    cursor: pointer;
+}
+
+.trash {
+    cursor: pointer;
 }

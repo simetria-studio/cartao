@@ -119,18 +119,26 @@
                     </div>
 
                     <div class="grid-item">
-                        <div class="payment-modal" data-dados="{{ $split }}" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
-                        </div>
-                        <div class="dropdown more">
+                        @if ($split->status !== 1)
+                            <div class="payment-modal" data-dados="{{ $split }}" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
+                            </div>
+                        @else
+                            <div class="payment-modal" data-dados="{{ $split }}" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <img src="{{ asset('painel/img/icons/eye.svg') }}" alt="">
+                            </div>
+                        @endif
+
+                        {{-- <div class="dropdown more">
                             <a class="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                               <li><a class="dropdown-item edit" href="#">Editar</a></li>
                               <li><a class="dropdown-item delete" href="#">Deletar</a></li>
                               <li><a class="dropdown-item pay" href="#">Comissão</a></li>
                             </ul>
-                          </div>
+                          </div> --}}
                         {{-- <div class="more dropdown">
                             <a class="" id="dropdownMenuLink-{{ $key }}" data-bs-toggle="dropdown" aria-expanded="false">...</a>
                         </div>

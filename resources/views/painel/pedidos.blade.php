@@ -139,7 +139,7 @@
                             <div class="percent" data-id="{{ $key }}">
                                 <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
                             </div>
-                            @else
+                        @else
                             <span></span>
                         @endif
                         <div class="trash" data-id="{{ $key }}">
