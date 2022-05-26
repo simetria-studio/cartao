@@ -103,7 +103,7 @@
                             <h5>{{ date_format($date, 'd/m/Y') ?? '18/05/2022' }}</h5>
                         </div>
                     </div>
-                    <div>
+                    <div class="grid-item-d">
                         <div>
                             @if ($venda->parcela_status == 0)
                                 <button class="btn-filter-4"><span>Cancelado</span></button>
@@ -137,6 +137,8 @@
                             <div class="percent" data-id="{{ $key }}">
                                 <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
                             </div>
+                            @else
+                            <span></span>
                         @endif
                         <div class="trash" data-id="{{ $key }}">
                             <img src="{{ asset('painel/img/icons/trash.svg') }}" alt="">
@@ -146,5 +148,6 @@
                 </div>
             </div>
         @endforeach
+        {{ $vendas->links() }}
     </div>
 @endsection

@@ -67,7 +67,7 @@
 
 .table-headling {
     display: grid;
-    grid-template-columns: 15px 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 15px 1fr 1fr 1fr 1fr 1fr;
     margin-top: 1em;
     align-items: center;
     gap: 30px;
@@ -98,44 +98,63 @@
             grid-template-columns: 15px auto auto auto auto auto auto;
             gap: 30px;
             align-items: baseline;
+
             h5 {
                 font-weight: 600;
                 font-size: 14px;
 
                 color: #000000;
             }
-            .check{
+
+            .check {
                 margin-top: 0.5em;
             }
-            .more{
+
+            .more {
                 font-size: 1.5em;
                 margin-left: 1em;
-                a{
+
+                a {
                     text-decoration: none;
-                    color:#605BFF;
+                    color: #605BFF;
                 }
             }
         }
     }
 }
-.grid-item{
+
+.grid-item {
     display: grid;
     grid-template-columns: 40px auto;
     align-items: baseline;
+
+    span {
+        width: 20px;
+        height: 20px;
+    }
 }
-.grid-item-a{
+
+.grid-item-a {
     display: grid;
     grid-template-columns: 40px 100%;
     align-items: baseline;
 }
-.grid-item-b{
+
+.grid-item-b {
     display: grid;
     grid-template-columns: 30px 180px;
     align-items: baseline;
 }
-.grid-item-c{
+
+.grid-item-c {
     display: grid;
     grid-template-columns: 30px 1fr;
+    align-items: baseline;
+}
+
+.grid-item-d {
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: baseline;
 }
 
@@ -147,4 +166,13 @@
 
     border: 1px solid #B3B3BF;
     border-radius: 2px;
+}
+
+.payment-modal {
+    cursor: pointer;
+}
+
+.more {
+    cursor: pointer;
+
 }

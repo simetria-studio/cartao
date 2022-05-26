@@ -1,4 +1,4 @@
-$(document).on('change','#select_id', function () {
+$(document).on('change', '#select_id', function () {
 
     var optionSelected = $(this).find("option:selected");
     var valor = optionSelected.val();
@@ -12,7 +12,7 @@ $(document).on('change','#select_id', function () {
     });
 });
 
-$(document).on('change','.filter-status', function () {
+$(document).on('change', '.filter-status', function () {
     var optionSelected = $(this).find("option:selected");
     var valor = optionSelected.val();
     $.ajax({
@@ -24,7 +24,7 @@ $(document).on('change','.filter-status', function () {
     });
 });
 
-$('.btn-status').on('click', function () {
+$(document).on('click', '.btn-status', function () {
     var todos = $(this).data('value');
     $.ajax({
         url: "filter-by-status",
@@ -111,7 +111,7 @@ $(document).on('click', '.trash', function () {
 });
 
 
-$(document).on('click','.payment-modal', function () {
+$(document).on('click', '.payment-modal', function () {
     var dados = $(this).data('dados')
     var valor1 = parseFloat(dados.valor_total);
     var valor2 = parseFloat(dados.valor);

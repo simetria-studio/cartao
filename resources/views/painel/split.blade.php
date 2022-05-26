@@ -123,9 +123,22 @@
                             data-bs-target="#exampleModal">
                             <img src="{{ asset('painel/img/icons/percent-green.svg') }}" alt="">
                         </div>
-                        <div class="more">
-                            <a href="#">...</a>
+                        <div class="dropdown more">
+                            <a class="" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">...</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                        {{-- <div class="more dropdown">
+                            <a class="" id="dropdownMenuLink-{{ $key }}" data-bs-toggle="dropdown" aria-expanded="false">...</a>
                         </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink-{{ $key }}">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
@@ -148,23 +161,23 @@
                                 <div class="row">
                                     <div class="mb-3 col-md-4">
                                         <label for="exampleFormControlInput1" class="form-label">Pedido</label>
-                                        <input type="text" class="form-control" name="id_pedido" id="pedido" >
+                                        <input type="text" class="form-control" name="id_pedido" id="pedido">
                                     </div>
                                     <div class="mb-3 col-md-4">
                                         <label for="exampleFormControlInput1" class="form-label">Valor Total</label>
-                                        <input type="text" class="form-control" name="valor_total" id="total" >
+                                        <input type="text" class="form-control" name="valor_total" id="total">
                                     </div>
                                     <div class="mb-3 col-md-4">
                                         <label for="exampleFormControlInput1" class="form-label">Comissão</label>
-                                        <input type="text" class="form-control" name="comissao" id="comissao" >
+                                        <input type="text" class="form-control" name="comissao" id="comissao">
                                     </div>
                                     <div class="mb-3 col-md-12">
                                         <label for="exampleFormControlInput1" class="form-label">Cliente</label>
-                                        <input type="text" class="form-control" name="cliente" id="cliente" >
+                                        <input type="text" class="form-control" name="cliente" id="cliente">
                                     </div>
                                     <div class="mb-3 col-md-12">
                                         <label for="exampleFormControlInput1" class="form-label">Influencer</label>
-                                        <input type="text" class="form-control" name="influencer" id="influencer" >
+                                        <input type="text" class="form-control" name="influencer" id="influencer">
                                     </div>
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Carregar comprovante</label>
