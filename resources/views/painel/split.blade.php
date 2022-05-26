@@ -95,7 +95,7 @@
                             <h5>{{ $split->cliente }}</h5>
                         </div>
                     </div>
-                    <div class="grid-item-c">
+                    <div class="grid-item-e">
 
                         <div>
                             <h5>{{ 'R$ ' . number_format($split->valor, 2, ',', '.') }}</h5>
