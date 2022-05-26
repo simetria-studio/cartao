@@ -46,6 +46,8 @@
                         <button class="btn-filter-4"><span>Cancelado</span></button>
                     @elseif ($venda->parcela_status == 1)
                         <button class="btn-filter-3"><span>Pendente</span></button>
+                    @elseif ($venda->parcela_status == 10)
+                        <button class="btn-filter-3"><span>Pendente</span></button>
                     @elseif ($venda->parcela_status == 2)
                         <button class="btn-filter-2"><span>Pago</span></button>
                     @elseif ($venda->parcela_status == 4)
