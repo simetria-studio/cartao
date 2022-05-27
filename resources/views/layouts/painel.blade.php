@@ -70,13 +70,13 @@
                             <img src="{{ asset('painel/img/profile_foto.png') }}" alt="">
                         </div>
                         <div class="user-text">
-                            <h5>Luis Carlos</h5>
+                            <h5>{{ auth()->user()->name }}</h5>
                             <p>Administrador</p>
                         </div>
                     </div>
 
                     <div>
-                        <img src="{{ asset('painel/img/icons/logout.svg') }}" alt="">
+                       <a href="{{ route('admin.logout') }}"><img src="{{ asset('painel/img/icons/logout.svg') }}" alt=""></a>
                     </div>
                 </div>
             </div>

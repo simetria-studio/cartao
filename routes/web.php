@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\CustomAuthController;
 use App\Http\Controllers\ClientesController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\InfluencerController;
@@ -19,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('admin-login', [CustomAuthController::class, 'index'])->name('admin.login');
+Route::post('admin-login-post', [CustomAuthController::class, 'login'])->name('admin.login.post');
+Route::any('admin-logout', [CustomAuthController::class, 'logout'])->name('admin.logout');
 
 Route::any('teste-api', [TesteApiController::class, 'index'])->name('teste.api');
 Route::get('delete-venda', [TesteApiController::class, 'exvluirVenda']);
@@ -30,7 +33,7 @@ Route::get('/', [FrontController::class, 'index'])->name('index');
 Route::get('/club-de-beneficios', [FrontController::class, 'club'])->name('club');
 
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [PainelController::class, 'index'])->name('admin.index');
     Route::get('pedidos', [PainelController::class, 'pedidos'])->name('admin.pedidos');
     Route::get('filter-by-id', [PainelController::class, 'filterId']);
@@ -51,3 +54,7 @@ Route::prefix('admin')->group(function () {
     Route::get('filter-by-id-clientes', [ClientesController::class, 'filterId']);
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
