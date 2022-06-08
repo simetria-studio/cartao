@@ -14,4 +14,8 @@ class FrontController extends Controller
     {
         return view('front.club');
     }
+    public function influencer()
+    {
+      return view('front.influencer');
+    }
 }

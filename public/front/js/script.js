@@ -59,7 +59,6 @@ $('.btn-card').on('click', function () {
 $('.fade-line').on('click', function () {
     $(".request-card").animate({ width: '0' }, 0);
     $(".fade-line").animate({ width: '0' }, 0);
-
 });
 $('#cpf').mask('999.999.999-99');
 $('#telefone').mask('(99) 99999-9999');

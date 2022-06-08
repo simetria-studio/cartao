@@ -31,6 +31,7 @@ Route::any('client-insert', [TesteApiController::class, 'insertClient'])->name('
 
 Route::get('/', [FrontController::class, 'index'])->name('index');
 Route::get('/club-de-beneficios', [FrontController::class, 'club'])->name('club');
+Route::get('/influencer/carlinhos-maia', [FrontController::class, 'influencer'])->name('influencer');
 
 
 Route::prefix('admin')->middleware('auth')->group(function () {
