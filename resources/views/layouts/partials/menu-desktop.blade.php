@@ -28,7 +28,7 @@
             </div>
         </div>
         <div>
-            <button class="btn btn-card">Peça seu cartão</button>
+            <button class="btn btn-card" id="btn-card">Peça seu cartão</button>
         </div>
         <div class="user" onclick="minhaConta()">
             <div>

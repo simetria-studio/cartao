@@ -6,7 +6,7 @@
                <a href="{{ route('index') }}"> <img src="{{ asset('front/img/logo.svg') }}" alt=""></a>
             </div>
             <div>
-                <button class="btn btn-card">Peça seu cartão</button>
+                <button class="btn btn-card" data-bs-toggle="modal" data-bs-target="#modalCard">Peça seu cartão</button>
             </div>
             <div class="menu-btn" id="menu-new">
                 <img src="{{ asset('front/img/entypo_menu.svg') }}" alt="">
@@ -25,7 +25,7 @@
                 semana.</p>
         </div>
         <div class="images">
-            <div class="agenda" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="agenda" >
                 <div>
                     <img src="{{ asset('front/img/wedding-day.svg') }}" alt="">
                 </div>
@@ -33,7 +33,7 @@
                     <h4>Agendar consulta</h4>
                 </div>
             </div>
-            <div class="club" onclick="routeClub()">
+            <div class="club" >
                 <div>
                     <img src="{{ asset('front/img/discount.svg') }}" alt="">
                 </div>

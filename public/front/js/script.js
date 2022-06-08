@@ -51,7 +51,7 @@ $("#paybutton").click(function () {
         }
     });
 });
-$('.btn-card').on('click', function () {
+$('#btn-card').on('click', function () {
     $(".request-card").animate({ width: '588px' }, 0);
     $(".fade-line").animate({ width: '100%' }, 0);
 
@@ -63,6 +63,9 @@ $('.fade-line').on('click', function () {
 $('#cpf').mask('999.999.999-99');
 $('#telefone').mask('(99) 99999-9999');
 $('#data').mask('99/99/9999');
+$('#cpf-m').mask('999.999.999-99');
+$('#telefone-m').mask('(99) 99999-9999');
+$('#data-m').mask('99/99/9999');
 
 
 function minhaConta() {

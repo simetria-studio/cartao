@@ -24,6 +24,7 @@
 
         .images {
             padding: 1em 2em;
+
             h4 {
                 font-weight: 800;
                 font-size: 15px;
@@ -61,7 +62,8 @@
                 letter-spacing: -0.05em;
 
                 color: #192655;
-                span{
+
+                span {
                     color: #00BBAB;
                 }
             }
@@ -129,7 +131,7 @@
             align-items: center;
             text-align: center;
             letter-spacing: -0.02em;
-
+            background: #05E398 !important;
             color: #FFFFFF;
         }
 
@@ -269,6 +271,28 @@
     .car {
         display: flex;
         justify-content: flex-end;
+    }
+
+
+    .middle-text {
+        padding: 1em 3em;
+        text-align: center;
+    }
+
+    .m-inputs {
+        input {
+            background: #E4F4EF !important;
+            border-radius: 4.42187px !important;
+            padding: 1em;
+        }
+    }
+
+    .btn-next {
+        background: #192655;
+        border-radius: 6.9257px;
+        color: #fff;
+        font-weight: 700;
+        padding: 0.8em 4em;
     }
 
     //footer
