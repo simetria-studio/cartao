@@ -7,7 +7,7 @@
             <h1>Consultas médicas a partir de <span>R$ 24</span></h1>
         </div>
         <div class="text-center">
-            <button class="btn btn-card">Peça seu cartão</button>
+            <button class="btn btn-card" data-bs-toggle="modal" data-bs-target="#modalCard">Peça seu cartão</button>
         </div>
     </div>
     <div class="m-hero-2 mt-5">
@@ -95,7 +95,7 @@
         </h1>
     </div>
     <div class="text-center my-4">
-        <button class="btn btn-card">Peça seu cartão</button>
+        <button class="btn btn-card " data-bs-toggle="modal" data-bs-target="#modalCard">Peça seu cartão</button>
     </div>
     <div class="car">
         <div>
