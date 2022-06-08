@@ -68,3 +68,16 @@ $('#data').mask('99/99/9999');
 function minhaConta() {
     window.open('https://cartaocomvoce.faturasimples.com.br/area-cliente/login/', '_blank');
 }
+
+
+$('.slider-par').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows:false,
+    dots: false,
+    centerMode: true,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });

@@ -1,0 +1,193 @@
+@media screen and (max-width: 600px) {
+    .d-header {
+        display: none !important;
+    }
+
+    .d-home {
+        display: none !important;
+    }
+
+    .grid-m-menu {
+        display: flex;
+        // grid-template-columns: 110px 120px 100px;
+        padding: 1em;
+        justify-content: space-between;
+        // justify-items: center;
+
+        .logo {
+            width: 108px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .btn-card {
+            // width: 70%;
+            padding: 0 !important;
+            font-weight: 800;
+            font-size: 12.2798px;
+            line-height: 13px;
+            width: 118px;
+            height: 42px;
+            /* or 103% */
+            justify-content: center !important;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -0.02em;
+
+            color: #FFFFFF;
+        }
+
+
+
+        .menu-btn {
+            width: 45px;
+            height: 45px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    .img-m-hero {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-m-hero {
+        h1 {
+            font-size: 25px;
+            line-height: 27px;
+            /* or 108% */
+            font-weight: 700;
+
+            text-align: center;
+            letter-spacing: -0.05em;
+            padding: 1em 3em;
+            color: #192655;
+
+            span {
+                font-weight: 900;
+                color: #00BBAB;
+            }
+        }
+    }
+
+
+    .grid-hero-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        p {
+            font-size: 13px;
+            line-height: 28px;
+            /* or 214% */
+
+            letter-spacing: -0.04em;
+
+            color: #000000;
+
+        }
+    }
+
+    .partners {
+        margin-top: 2em;
+        margin-bottom: 1em;
+
+        h1 {
+            font-weight: 900;
+            font-size: 25px;
+            line-height: 27px;
+            /* or 106% */
+            padding: 0 2em;
+
+            text-align: center;
+            letter-spacing: -0.05em;
+
+            color: #192655;
+
+            span {
+                color: #00BBAB;
+            }
+        }
+    }
+
+    .club-descontos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .descontos {
+        margin-top: 1em;
+    }
+
+    .smile-grid {
+        display: flex;
+
+        padding: 0 2em;
+
+        div {
+            margin: 0.5em 0.3em;
+        }
+
+        img {
+            width: 35px;
+        }
+
+        h5 {
+            font-weight: 400;
+            font-size: 15.1801px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.04em;
+
+            color: #000000;
+        }
+    }
+
+    .call-bottom {
+        h1 {
+            font-weight: 900;
+            font-size: 25px;
+            line-height: 31px;
+            /* or 124% */
+            text-align: center;
+            letter-spacing: -0.05em;
+            padding: 0 3em;
+            color: #192655;
+            span{
+                color: #00BBAB;
+            }
+        }
+    }
+    .car{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    //footer
+    footer {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .m-home {
+        display: none !important;
+    }
+
+    .m-header {
+        display: none !important;
+    }
+}
