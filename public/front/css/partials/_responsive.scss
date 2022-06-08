@@ -7,6 +7,99 @@
         display: none !important;
     }
 
+    .menu-mobile {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        background: #FFFFFF;
+        z-index: 1200;
+
+        .logo-menu {
+            display: flex;
+            justify-content: center;
+            padding: 1em;
+        }
+
+        .images {
+            padding: 1em 2em;
+            h4 {
+                font-weight: 800;
+                font-size: 15px;
+                line-height: 16px;
+                display: flex;
+                align-items: center;
+                letter-spacing: -0.02em;
+                color: #00BBAB;
+            }
+
+            .agenda {
+                display: grid;
+                grid-template-columns: repeat(2, 50px);
+                align-items: end;
+            }
+
+            .club {
+                display: grid;
+                margin-top: 1em;
+                grid-template-columns: repeat(2, 50px);
+                align-items: end;
+
+            }
+        }
+
+        .text-menu {
+            padding: 1em 2em;
+
+            h1 {
+                font-weight: 900;
+                font-size: 18.193px;
+                line-height: 19px;
+                /* or 107% */
+
+                letter-spacing: -0.05em;
+
+                color: #192655;
+                span{
+                    color: #00BBAB;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 14.3902px;
+                line-height: 19px;
+
+                letter-spacing: -0.04em;
+
+                color: #000000;
+
+            }
+
+            h2 {
+                font-weight: 900;
+                font-size: 22.7376px;
+                line-height: 24px;
+                /* identical to box height, or 107% */
+                letter-spacing: -0.05em;
+
+                color: #192655;
+
+            }
+
+        }
+    }
+
+    .fade-line {
+        // width: ;
+        background-color: #000000a8;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+    }
+
     .grid-m-menu {
         display: flex;
         // grid-template-columns: 110px 120px 100px;
@@ -166,12 +259,14 @@
             letter-spacing: -0.05em;
             padding: 0 3em;
             color: #192655;
-            span{
+
+            span {
                 color: #00BBAB;
             }
         }
     }
-    .car{
+
+    .car {
         display: flex;
         justify-content: flex-end;
     }

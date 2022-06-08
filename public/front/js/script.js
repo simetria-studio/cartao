@@ -74,10 +74,21 @@ $('.slider-par').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    arrows:false,
+    arrows: false,
     dots: false,
     centerMode: true,
     variableWidth: true,
     autoplay: true,
     autoplaySpeed: 2000,
-  });
+});
+
+$(document).on('click', '#menu-new', function () {
+    $(".menu-mobile").animate({ "left": "0" }, 300);
+    // $(".menu-mobile").animate({ opacity: 1 }, 150);
+    $(".fade-line").animate({ width: '100%' }, 0);
+});
+$(document).on('click', '.fade-line', function () {
+    $(".menu-mobile").animate({ "left": "-100%" }, 300);
+    // $(".menu-mobile").animate({ opacity: 0 }, 0);
+    $(".fade-line").animate({ width: '0' }, 0);
+});
