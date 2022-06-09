@@ -33,7 +33,7 @@
                     <h4>Agendar consulta</h4>
                 </div>
             </div>
-            <div class="club" >
+            <div class="club" onclick="routeClub()">
                 <div>
                     <img src="{{ asset('front/img/discount.svg') }}" alt="">
                 </div>
