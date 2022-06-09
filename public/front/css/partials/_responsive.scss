@@ -295,6 +295,10 @@
         padding: 0.8em 4em;
     }
 
+    .d-influencer{
+        display: none !important;
+    }
+
     //footer
     footer {
         display: none !important;
@@ -307,6 +311,9 @@
     }
 
     .m-header {
+        display: none !important;
+    }
+    .m-influencer{
         display: none !important;
     }
 }
