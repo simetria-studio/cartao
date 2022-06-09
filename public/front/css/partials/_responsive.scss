@@ -278,7 +278,12 @@
         padding: 1em 3em;
         text-align: center;
     }
-
+    .slider-par{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
     .m-inputs {
         input {
             background: #E4F4EF !important;

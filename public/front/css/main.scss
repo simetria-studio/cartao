@@ -1,17 +1,26 @@
 html {
     font-family: 'Poppins', sans-serif;
 }
+
 @import 'partials/responsive';
 
 .custom-container {
-    margin-left: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
     // width: 100%;
+}
+
+.logo {
+    width: 150px;
+    img {
+        width: 85%;
+    }
 }
 
 .header-grid {
     display: grid;
-    grid-template-columns: repeat(6, 190px);
-    gap: 20px;
+    grid-template-columns: 190px 190px 190px 190px  190px 190px;
+    gap: 41px;
     padding: 1em 0;
     width: 100%;
     align-items: center;
@@ -393,10 +402,12 @@ footer {
     width: 0;
     height: 100vh;
     right: 0;
-    .border-color{
+
+    .border-color {
         border-left: solid 2px #A3FADD;
         border-right: solid 2px #A3FADD;
     }
+
     h4 {
         font-weight: 900;
         font-size: 17.6193px;
@@ -503,10 +514,11 @@ footer {
 .img-medico {
     margin-bottom: -16px;
 }
-.modal-form
-{
+
+.modal-form {
     padding: 0 2em;
 }
+
 .hero-influencer {
     background-image: url('../img/carlinhos.png');
     width: 100%;
@@ -555,6 +567,7 @@ footer {
         }
     }
 }
+
 .hero-5 {
     background-image: url('../img/backcarlinhos.png');
     background-repeat: no-repeat;

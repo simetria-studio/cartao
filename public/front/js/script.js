@@ -81,8 +81,8 @@ $('.slider-par').slick({
     dots: false,
     centerMode: true,
     variableWidth: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
 });
 
 $(document).on('click', '#menu-new', function () {
